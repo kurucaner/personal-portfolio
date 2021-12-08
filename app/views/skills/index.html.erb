@@ -1,0 +1,27 @@
+<h1>Skills</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">ICON</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @skills.each do |skill| %>
+      <tr>
+        <th scope="row"><%= skill.id %></th>
+        <td><%= skill.name %></td>
+        <td><%= skill.description %></td>
+        <td><%= skill.icon %></td>
+        <td><%= link_to 'Show', skill %></td>
+        <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
+        <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Skill', new_skill_path %>
