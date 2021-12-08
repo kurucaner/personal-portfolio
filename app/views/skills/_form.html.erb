@@ -1,4 +1,4 @@
-<div class="container" style="margin-top:10em">
+<div class="container">
 <%= form_with(model: skill) do |form| %>
   <% if skill.errors.any? %>
     <div id="error_explanation">
@@ -12,23 +12,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :class => 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="mb-3">
+    <%= form.label :descriptiong %>
+    <%= form.text_area :description, :class => 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :icon %>
-    <%= form.text_field :icon %>
+    <%= form.text_field :icon, :class => 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="d-grid gap-2 d-md-block">
+    <%= form.submit :class => 'btn btn-primary' %>
   </div>
   </div>
 <% end %>
