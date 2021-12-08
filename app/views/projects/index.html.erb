@@ -1,0 +1,33 @@
+
+<h1>Projects</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DATE</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">IMAGE</th>
+      <th scope="col">LINK</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <th scope="row"><%= project.id %></th>
+        <td><%= project.name %></td>
+        <td><%= project.date %></td>
+        <td><%= project.description %></td>
+        <td><%= project.image %></td>
+        <td><%= project.link %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New project', new_project_path %>
+
