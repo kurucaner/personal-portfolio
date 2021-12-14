@@ -11,25 +11,76 @@
             </div>
         </header>
         <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">SKILLS</h2>
-                    <h3 class="section-subheading text-muted">MY TOP SKILLS</h3>
-                </div>
-                 <div class="row text-center">
-                 <% @skills.each do |skill| %>
-                <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="<%= skill.icon %> fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3"><%= skill.name %></h4>
-                        <p class="text-muted"><%= skill.description %></p>
-                </div>
-                <% end %>
-             </div>
-          </section>
+        <section>
+                    <h2 class="section-heading text-uppercase">Technical Skills</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                    <div class="skill-bars">
+                        <div class="bar">
+                        <div class="info">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="progress-line js">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>Ruby on Rails</span>
+                        </div>
+                        <div class="progress-line ror">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>React</span>
+                        </div>
+                        <div class="progress-line react">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>AWS</span>
+                        </div>
+                        <div class="progress-line aws">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>SQL</span>
+                        </div>
+                        <div class="progress-line sql">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>Python</span>
+                        </div>
+                        <div class="progress-line python">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-line html">
+                            <span></span>
+                        </div>
+                        </div>
+                        <div class="bar">
+                        <div class="info">
+                            <span>CSS</span>
+                        </div>
+                        <div class="progress-line css">
+                            <span></span>
+                        </div>
+                        </div>
+                    </div>
+        </section>
         <!-- BLOGS Grid-->
         <%= render 'layouts/bloggrid' %>
         <!-- PROJECTS-->
